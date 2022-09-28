@@ -71,15 +71,12 @@
  ┃ ┗ 📜TimeSeriesDecomposition.ipynb
 ```
 ## 파일 
-- EDA : 통계적인 기법을 사용하여 데이터를 분석한 내용에 대해서 다룹니다.
-    - ANOVA.ipynb : 57개의 features가 14개의 targets에 영향을 미치는지를 분석하기 위해서 ANOVA 검정을 시행하였다. 이 때, 수치형변수들을 모두 범주화하였다.
-    - Correlation and Distribution.ipynb : features와 targets의 분포와 상관성을 조사하였다.
-    - NULL.ipynb : 결측값을 확인하고 보간하였다.
+- Crawling : 일출, 일몰 시간을 크롤링한 과정에 대해서 다룹니다.
+    - CrawlingData : 일출, 일몰시간을 크롤링한 데이터가 담겨져 있습니다.
+    - DataList : 크롤링할 시간에 대한 정보를 담고 있는 데이터입니다.
+    - Code.ipynb : 크롤링한 코드를 다룹니다.
     
-- MODEL : 최종적으로 가장 성능이 우수한 모델에 대한 코드입니다.
-    - MultiOutput_Catboost_Bayesian.ipynb : MultiOutput Catboost 모델에 대해서 베이지안 옵티마이저로 하이퍼 파라미터 튜닝을 진행하였으며, 결과가 잘 나온 2개의 모델을 선정하였다.
-    - MultiOutput_LGBM_Bayesian.ipynb : MultiOutput LGBM 모델에 대해서 베이지안 옵티마이저로 하이퍼 파라미터 튜닝을 진행하였으며, 결과가 잘 나온 2개의 모델을 선정하였다.
-    - Submission.ipynb : MultiOutput_Catboost_Bayesian.ipynb과 MultiOutput_LGBM_Bayesian.ipynb에서 선정한 4개의 모델을 앙상블하여 최종 결과에 반영하였다.이 때, 각각의 모델에서 제일 잘 나온 모델에 2/3의 가중치를, 그 다음으로 잘 나온 모델에 1/3가중치를 부여하였다.
+- Data : 초기 데이터와 모델링 데이터 셋이 들어있는 폴더입니다.
     
 - Trial : 문제를 해결하기 위해 여러 모델링을 시도한 코드입니다.
     - AutoEncoder : AutoEncoder를 이용하여 모델을 구성해보았습니다.
