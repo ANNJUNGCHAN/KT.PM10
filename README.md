@@ -23,7 +23,9 @@
 
 ## 프로젝트 결과
 - rmse : 3.32031, r2-score : 0.98
-![image](https://user-images.githubusercontent.com/89781598/192284107-f20760dc-cde2-495a-aa68-2e78303736bd.png)
+<p align="center">
+  ![image](https://user-images.githubusercontent.com/89781598/192284107-f20760dc-cde2-495a-aa68-2e78303736bd.png)
+</p>
 
 ## 프로젝트 설명
 - 해당 프로젝트는 시계열적인 방법을 최대한 적용하려고 노력하였습니다.
@@ -76,20 +78,24 @@
     - DataList : 크롤링할 시간에 대한 정보를 담고 있는 데이터입니다.
     - Code.ipynb : 크롤링한 코드를 다룹니다.
     
-- Data : 초기 데이터와 모델링 데이터 셋이 들어있는 폴더입니다.
+- Data : 초기 데이터와 모델링 데이터 셋이 들어있는 폴더입니다.(초기 데이터 셋은 
+    - air_2021.csv, air_2022.csv : 대기 질에 관한 정보가 들어있는 초기 데이터 셋
+    - weather_2021.csv, weather_2022.csv : 날씨에 대한 정보가 들어있는 초기 데이터 셋
+    - train.csv : 모델 학습을 위해 정제한 데이터 셋
+    - test.csv : 예측을 위해 정제한 데이터 셋
     
-- Trial : 문제를 해결하기 위해 여러 모델링을 시도한 코드입니다.
-    - AutoEncoder : AutoEncoder를 이용하여 모델을 구성해보았습니다.
-    - LSTM : LSTM layer를 이용하여 장기기억을 끌고가면서 모델을 학습시키면 성능이 더욱 좋을 것이라고 판단하여 이를 이용해 모델을 구성해보았습니다.
-    - SDCFEModel
-        - Seperate Dense Concat Fold Ensenble Model
-        - 연관이 있는 열을 하나로 묶고, 연관성이 있는 그룹들 각각을 Dense layer로 차원을 축소하여 잠재벡터를 만듦.
-        - 이 후, 해당 잠재벡터들을 모두 병합한 후, KFOLD 5로 5개의 모델을 각각 생성한 후, 모델들을 저장하고 Ensemble Method를 사용하여 5개의 모델을 모두 앙상블학습 시킴.
-    - UNET-Ensemble
-        - UNET의 구조를 착안하여 만든 모델로, UNET의 구조처럼 잠재벡터를 단계적으로 만들어나가면서, 단계별로 잠재벡터를 형성한다.
-        - UNET의 최하단에 진입했을 때, 다시 상단으로 올라가면서 예측값을 생성한다.
-        - 이 때, 상단으로 올라오는 단계별로 하단에서 만든 잠재벡터들을 아래에서 위로 끌어오면서, 모델이 하단으로 가면서 잃어버린 정보량을 최대한 보전하려고 노력한다.
-        - 이 후, 최상단에서는 최하단으로 진입하는 단계에서 단계적으로 생성한 잠재벡터들을 모두 고려한 결과값을 도출한다.
+- Model : 모델링에 대한 정보가 담겨있는 폴더입니다.
+    - DataBase_For_Modeling : 시계열적 특성을 뽑아낸 데이터 셋
+    - Model_Save : 학습시킨 모델을 저장한 파일
+      - Baseline.7z : 초기 모델(variance importance를 고려하지 않고 모든 변수를 넣어서 학습시킨 모델)
+      - Remove_importance_variables.7z : variance importance를 고려하여 중요한 변수만 넣어서 학습시킨 모델
+    - Baseline.ipynb : 초기 모델(variance importance를 고려하지 않고 모든 변수를 넣어서 학습시킨 모델) 코딩 파일
+    - Remove_not_important_variable_and_Ensemble.ipynb : variance importance를 고려하여 중요한 변수만 넣어서 학습시킨 모델의 코딩 파일
+ 
+- Preprocessing : 데이터 전처리에 대한 정보가 담겨있는 폴더입니다.
+    - autocorrelation.ipynb : 예측값(PM10)이 과거 몇 시점까지 상관성이 있는지 파악하기 위한 코드
+    - preprocessing.ipynb : 데이터 전처리 함수들이 담겨있는 코드
+    - TimeSeriesDecomposition.ipynb : 시계열 분해를 진행하고, 시계열 분해요소를 추출하는 
 
 ## 문의사항
 * email : ajc227ung@gmail.com
