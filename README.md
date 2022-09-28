@@ -23,7 +23,7 @@
 
 ## 프로젝트 결과
 - rmse : 3.32031, r2-score : 0.98
-                       ![image](https://user-images.githubusercontent.com/89781598/192284107-f20760dc-cde2-495a-aa68-2e78303736bd.png)
+                     ![image](https://user-images.githubusercontent.com/89781598/192284107-f20760dc-cde2-495a-aa68-2e78303736bd.png)
 
 ## 프로젝트 설명
 - 해당 프로젝트는 시계열적인 방법을 최대한 적용하려고 노력하였습니다.
