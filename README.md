@@ -93,7 +93,7 @@
 - Preprocessing : 데이터 전처리에 대한 정보가 담겨있는 폴더입니다.
     - autocorrelation.ipynb : 예측값(PM10)이 과거 몇 시점까지 상관성이 있는지 파악하기 위한 코드
     - preprocessing.ipynb : 데이터 전처리 함수들이 담겨있는 코드
-    - TimeSeriesDecomposition.ipynb : 시계열 분해를 진행하고, 시계열 분해요소를 추출하는 
+    - TimeSeriesDecomposition.ipynb : 시계열 분해를 진행하고, 시계열 분해요소를 추출하는 과정을 담은 코드
 
 ## 문의사항
 * email : ajc227ung@gmail.com
